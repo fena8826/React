@@ -1,0 +1,11 @@
+.nykaa-banner {
+  display: block;
+  width: 100%;
+
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  image-rendering: auto; 
+  border-radius: 8px;    
+      
+}
