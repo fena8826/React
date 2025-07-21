@@ -18,12 +18,12 @@ const AddProduct = () => {
 
   const validate = () => {
     const newErrors = {};
-    if (!inputForm.title.trim()) newErrors.title = "Title is required.";
+    if (!inputForm.title.trim()) newErrors.title = "Title is add.";
     if (!inputForm.price || Number(inputForm.price) <= 0)
       newErrors.price = "Valid price is required.";
-    if (!inputForm.category || inputForm.category === "Select Category")
+    if (!inputForm.category || inputForm.category === "Select  your Category")
       newErrors.category = "Please select a category.";
-    if (!inputForm.brand.trim()) newErrors.brand = "Brand is required.";
+    if (!inputForm.brand.trim()) newErrors.brand = "Brand  name is required.";
     if (!inputForm.image.trim()) {
       newErrors.image = "Image URL is required.";
     } else if (!/^https?:\/\/.*\.(jpg|jpeg|png|webp|gif)$/i.test(inputForm.image)) {
