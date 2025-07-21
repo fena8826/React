@@ -27,9 +27,7 @@ const Home = () => {
   }, []);
   return (
     <>
-   <div>
-       <img src="https://tse3.mm.bing.net/th/id/OIP.i_PQTGQ3itP6azrtTXMbygHaDj?pid=Api&P=0&h=180" style={{  height:"400px" }} className="  nykaa-banner mt-5"/>
-   </div>
+ 
 
 <Container className="mt-5">
   <div className="row g-4">
@@ -40,37 +38,48 @@ const Home = () => {
             variant="top"
             src={product.image}
             className="rounded-top-4"
-            style={{ height: "250px", objectFit: "cover" }}
+            style={{ height: "300px", objectFit: "cover" }}
           />
 
           <Card.Body className="d-flex flex-column">
- 
             <div className="flex-grow-1">
               <Card.Title className="fw-bold fs-5">
                 {product.title}{" "}
                 <span className="text-muted small">#{product.id}</span>
               </Card.Title>
 
-              <Card.Text className="text-secondary mb-2">
-                <strong>Brand:</strong> {product.brand}
-              </Card.Text>
+              <Card.Text
+                    className="mb-2"
+                    style={{ color: "#6c757d", fontSize: "0.95rem", fontWeight: "500" }}
+                  >
+                    <strong style={{ color: "#333" }}>Brand:</strong> {product.brand}
+                  </Card.Text>
 
-              <Badge bg="warning" className="mb-3">
-                {product.category}
-              </Badge>
+              <span
+                    className="mb-3 d-inline-block"
+                    style={{
+                      backgroundColor: "#ffb347", 
+                      color: "#fff",
+                      padding: "4px 10px",
+                      borderRadius: "12px",
+                      fontSize: "0.85rem",
+                      fontWeight: "500"
+                    }}
+                  >
+                    {product.category}
+                </span>
             </div>
 
-       
             <div className="d-flex justify-content-between mt-auto pt-3 me-4 ms-4">
               <Button
-                variant="outline-warning"
+                style={{ backgroundColor: "#fc8eac", borderColor: "#fc8eac" }}
                 size="sm"
                 onClick={() => handleEdit(product.id)}
               >
                 Edit
               </Button>
               <Button
-                variant="outline-danger"
+                style={{ backgroundColor: "#A94064", borderColor: "#A94064" }}
                 size="sm"
                 onClick={() => handleDelete(product.id)}
               >
