@@ -25,7 +25,7 @@ const EditProduct = () => {
       ...inputForm,
       [name]: value,
     });
-    setErrors({ ...errors, [name]: "" }); // clear specific error on input
+    setErrors({ ...errors, [name]: "" }); 
   };
 
   const validate = () => {
