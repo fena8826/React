@@ -1,0 +1,127 @@
+
+body{
+  background-color: #ffd1dc;
+}
+ .pagination {
+  display: flex;
+  list-style: none;
+  gap: 5px;
+}
+
+.page-item .page-link {
+  color: #A94064;
+  border: 1px solid #fc8eac;
+  background-color: #fff;
+  transition: all 0.3s;
+  border-radius: 6px;
+  padding: 6px 12px;
+  font-weight: 500;
+}
+
+.page-item .page-link:hover {
+  background-color: #fc8eac;
+  color: #fff;
+}
+
+.page-item.active .page-link {
+  background-color: #A94064;
+  border-color: #A94064;
+  color: #fff;
+} 
+.card-hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 16px 28px rgba(0, 0, 0, 0.12);
+}
+
+.search-sort-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background-color: #ffe3ec; 
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  justify-content: space-between;
+}
+
+.search-sort-container .form-group {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.custom-input {
+  padding: 8px  12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 0.95rem;
+  min-width: 220px;
+  background-color: #fff;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.custom-input:focus {
+  border-color: #fc8eac;
+  box-shadow: 0 0 0 3px rgba(252, 142, 172, 0.25);
+  outline: none;
+}
+
+/* Dropdown */
+.custom-select {
+  padding: 0.45rem 0.75rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 0.95rem;
+  background-color: #fff;
+  min-width: 180px;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.custom-select:focus {
+  border-color: #fc8eac;
+  box-shadow: 0 0 0 3px rgba(252, 142, 172, 0.25);
+  outline: none;
+}
+
+.btn {
+  font-size: 0.9rem;
+  padding: 6px 14px;
+  border-radius: 8px;
+  border: none;
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+
+
+.search-btn {
+  background-color: #fc8eac;  
+  color: white;
+}
+
+.search-btn:hover {
+  background-color: #e55a87; 
+}
+
+.clear-btn {
+  background-color: #f5b6c2;  
+  color: #fff;
+}
+
+.clear-btn:hover {
+  background-color: #e99daa;
+}
+
+.sort-btn {
+  background-color: #a94064;
+  color: white;
+}
+
+.sort-btn:hover {
+  background-color: #902e4e;
+}
+
