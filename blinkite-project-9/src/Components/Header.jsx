@@ -56,7 +56,7 @@ const Header = () => {
             </Form>
           </Container>
 
-          {/* Add Product link */}
+
           <Nav.Link as={Link} to="/add-product" className="product fw-semibold">
             Add Product
           </Nav.Link>
