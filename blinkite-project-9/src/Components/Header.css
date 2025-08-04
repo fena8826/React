@@ -1,0 +1,23 @@
+.header-search input {
+  min-width: 250px;
+}
+
+@media (max-width: 768px) {
+  .header-search input {
+    min-width: 100px;
+  }
+}
+.product {
+  background-color: #28a745;
+  color: white !important;
+  padding: 8px 16px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.product:hover {
+  background-color: #218838;
+  color: white !important;
+  text-decoration: none;
+}
