@@ -16,7 +16,7 @@ const Header = () => {
   return (
     <Navbar bg="light" expand="lg" className="shadow-sm py-3">
       <Container>
-        {/* Logo */}
+   
         <Navbar.Brand href="/" className="fw-bold text-primary">
           <img
             src={logo}
@@ -26,23 +26,35 @@ const Header = () => {
           />{" "}
         </Navbar.Brand>
 
-        {/* Toggle for mobile */}
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
 
-        {/* Navbar content */}
+
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto"></Nav>
 
-          {/* Search bar */}
-          <Form
-            className="d-flex me-3 header-search success"
-            onSubmit={(e) => {
-              e.preventDefault();
-              handleSearch();
-            }}
-          >
-          
-          </Form>
+         
+       <Container className="mt-4">
+            <Form
+              className="d-flex justify-content-center mb-4"
+              onSubmit={(e) => {
+                e.preventDefault();
+                handleSearch();
+              }}
+            >
+              <div className="search-wrapper">
+                <input
+                  type="text"
+                  className="search-input"
+                  placeholder="Search by title, category or price..."
+                  value={search}
+                  onChange={(e) => setSearch(e.target.value)}
+                />
+                <button type="button" className="search-btn" onClick={handleSearch}>
+                  <IoIosSearch />
+                </button>
+              </div>
+            </Form>
+          </Container>
 
           {/* Add Product link */}
           <Nav.Link as={Link} to="/add-product" className="product fw-semibold">
