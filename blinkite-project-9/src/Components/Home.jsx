@@ -78,7 +78,6 @@ const Home = () => {
             </Form>
           </Container>
 
-          {/* 🛍 Product Cards */}
           <Container className="mt-3">
             <Row className="g-4">
               {filteredProducts.length > 0 ? (
