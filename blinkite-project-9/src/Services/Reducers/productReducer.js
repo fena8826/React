@@ -71,6 +71,7 @@ export const productReducer = (state = initalState, action) => {
           prod.desc.toLowerCase().includes(query) ||
           prod.category.toLowerCase().includes(query)
       );
+
       return {
         ...state,
         filteredProducts: filtered,

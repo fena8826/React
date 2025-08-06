@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { deleteProduct,getAllProductAsync,} from "../Services/Actions/productAction";
-import {Button,Card,Col,Container,Row,Spinner,Form,InputGroup,} from "react-bootstrap";
+import {Button,Card,Col,Container,Row,Spinner,Form,} from "react-bootstrap";
 import { IoIosSearch } from "react-icons/io";
 import { useNavigate } from "react-router";
 import banner from "../assets/banner.jpg";
