@@ -50,7 +50,7 @@ const EditProduct = () => {
 
   const validateForm = () => {
     const newErrors = {};
-    if (!inputForm.title.trim()) newErrors.title = "Title is required";
+    if (!inputForm.title.trim()) newErrors.title = "Title is added";
     if (!inputForm.desc.trim()) newErrors.desc = "Description is required";
     if (!inputForm.price) newErrors.price = "Price is required";
     if (!inputForm.category || inputForm.category === "Select Category")
