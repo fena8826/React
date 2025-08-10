@@ -1,16 +1,17 @@
 import { Button, Col, Container, Form, Row } from "react-bootstrap";
 import { useEffect, useState } from "react";
-import { useNavigate, useParams } from "react-router";
+import { useNavigate } from "react-router";
+import generateUniqueId from "generate-unique-id";
 import { useDispatch, useSelector } from "react-redux";
-import { FaCheck } from "react-icons/fa";
-import { getProduct, updateProduct } from "../Services/Actions/productAction";
-import "./EditProduct.css";
+import { IoMdAdd } from "react-icons/io";
+import { addProductAsync } from "../Services/Actions/productAction";
+import "./AddProduct.css";
 
-const EditProduct = () => {
-  const { id } = useParams();
+const AddProduct = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const { product } = useSelector((state) => state.productReducer);
+
+  const { isCreated, isError } = useSelector((state) => state.productReducer);
 
   const initialState = {
     id: "",
@@ -24,24 +25,13 @@ const EditProduct = () => {
   const [inputForm, setInputForm] = useState(initialState);
   const [errors, setErrors] = useState({});
 
-  useEffect(() => {
-    if (id) {
-      dispatch(getProduct(id));
-    }
-  }, [id, dispatch]);
-
-  useEffect(() => {
-    if (product) {
-      setInputForm(product);
-    }
-  }, [product]);
-
   const handleChanged = (e) => {
     const { name, value } = e.target;
     setInputForm({
       ...inputForm,
       [name]: value,
     });
+
     setErrors((prev) => ({
       ...prev,
       [name]: "",
@@ -63,15 +53,26 @@ const EditProduct = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
     if (!validateForm()) return;
 
-    dispatch(updateProduct(inputForm));
-    navigate("/");
+    const id = generateUniqueId({ length: 6, useLetters: false });
+    inputForm.id = id;
+
+    dispatch(addProductAsync(inputForm));
   };
+
+  useEffect(() => {
+    if (isCreated) {
+      navigate("/");
+    }
+  }, [isCreated]);
 
   return (
     <Container className="add-product-container">
-      <h1 className="add-product-title">Edit Product</h1>
+      <h1 className="add-product-title">Add New Product</h1>
+
+      {isError && <p className="text-danger">{isError}</p>}
 
       <Form className="mt-4" onSubmit={handleSubmit}>
         <Form.Group as={Row} className="mb-3">
@@ -85,7 +86,9 @@ const EditProduct = () => {
               onChange={handleChanged}
               isInvalid={!!errors.title}
             />
-            <Form.Control.Feedback type="invalid">{errors.title}</Form.Control.Feedback>
+            <Form.Control.Feedback type="invalid">
+              {errors.title}
+            </Form.Control.Feedback>
           </Col>
         </Form.Group>
 
@@ -100,7 +103,9 @@ const EditProduct = () => {
               onChange={handleChanged}
               isInvalid={!!errors.desc}
             />
-            <Form.Control.Feedback type="invalid">{errors.desc}</Form.Control.Feedback>
+            <Form.Control.Feedback type="invalid">
+              {errors.desc}
+            </Form.Control.Feedback>
           </Col>
         </Form.Group>
 
@@ -115,7 +120,9 @@ const EditProduct = () => {
               onChange={handleChanged}
               isInvalid={!!errors.price}
             />
-            <Form.Control.Feedback type="invalid">{errors.price}</Form.Control.Feedback>
+            <Form.Control.Feedback type="invalid">
+              {errors.price}
+            </Form.Control.Feedback>
           </Col>
         </Form.Group>
 
@@ -136,7 +143,9 @@ const EditProduct = () => {
               <option value="Snacks & Munchies">Snacks & Munchies</option>
               <option value="Ice Creams & Frozen Desserts">Ice Creams & Frozen Desserts</option>
             </Form.Select>
-            <Form.Control.Feedback type="invalid">{errors.category}</Form.Control.Feedback>
+            <Form.Control.Feedback type="invalid">
+              {errors.category}
+            </Form.Control.Feedback>
           </Col>
         </Form.Group>
 
@@ -151,13 +160,15 @@ const EditProduct = () => {
               onChange={handleChanged}
               isInvalid={!!errors.image}
             />
-            <Form.Control.Feedback type="invalid">{errors.image}</Form.Control.Feedback>
+            <Form.Control.Feedback type="invalid">
+              {errors.image}
+            </Form.Control.Feedback>
           </Col>
         </Form.Group>
 
         <div className="text-end">
-          <Button variant="primary" type="submit">
-          <FaCheck />Update Product
+          <Button variant="success" type="submit">
+            <IoMdAdd /> Add Product
           </Button>
         </div>
       </Form>
@@ -165,4 +176,4 @@ const EditProduct = () => {
   );
 };
 
-export default EditProduct;
+export default AddProduct;

@@ -3,14 +3,14 @@ import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router";
 import { useDispatch, useSelector } from "react-redux";
 import { FaCheck } from "react-icons/fa";
-import { getProduct, updateProduct } from "../Services/Actions/productAction";
+import { getProductAsync, updateProductAsync } from "../Services/Actions/productAction";
 import "./EditProduct.css";
 
 const EditProduct = () => {
   const { id } = useParams();
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const { product } = useSelector((state) => state.productReducer);
+  const { product, isUpdated } = useSelector((state) => state.productReducer);
 
   const initialState = {
     id: "",
@@ -26,7 +26,7 @@ const EditProduct = () => {
 
   useEffect(() => {
     if (id) {
-      dispatch(getProduct(id));
+      dispatch(getProductAsync(id));
     }
   }, [id, dispatch]);
 
@@ -35,6 +35,13 @@ const EditProduct = () => {
       setInputForm(product);
     }
   }, [product]);
+
+
+  useEffect(() => {
+    if (isUpdated) {
+      navigate("/");
+    }
+  }, [isUpdated, navigate]);
 
   const handleChanged = (e) => {
     const { name, value } = e.target;
@@ -65,13 +72,13 @@ const EditProduct = () => {
     e.preventDefault();
     if (!validateForm()) return;
 
-    dispatch(updateProduct(inputForm));
-    navigate("/");
+    dispatch(updateProductAsync(inputForm));
+
   };
 
   return (
-    <Container className="add-product-container">
-      <h1 className="add-product-title">Edit Product</h1>
+    <Container className="edit-product-container">
+      <h1 className="edit-product-title">Edit Product</h1>
 
       <Form className="mt-4" onSubmit={handleSubmit}>
         <Form.Group as={Row} className="mb-3">
@@ -157,7 +164,7 @@ const EditProduct = () => {
 
         <div className="text-end">
           <Button variant="primary" type="submit">
-          <FaCheck />Update Product
+            <FaCheck /> Update Product
           </Button>
         </div>
       </Form>

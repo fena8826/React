@@ -1,0 +1,130 @@
+
+.banner-img {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.search-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+}
+
+.search-input {
+  width: 100%;
+  padding-left: 16px;
+  padding-right: 38px;
+  height: 40px;
+  border-radius: 8px;
+  border: 1px solid #ced4da;
+  transition: border-color 0.2s;
+}
+
+.search-input:focus {
+  border-color: #198754;
+  box-shadow: 0 0 0 0.15rem rgba(25, 135, 84, 0.25);
+  outline: none;
+}
+
+.search-btn {
+  position: absolute;
+  top: 50%;
+  right: 5px;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  color: #198754;
+  cursor: pointer;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+}
+
+.search-btn:hover {
+  color: #145c32;
+}
+
+.product-card {
+  border: 1px solid #dce3ea;
+  border-radius: 14px;
+  transition: all 0.3s ease;
+  height: 100%;
+  font-family: 'Poppins', sans-serif; 
+  background-color: #ffffff;
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.product-card img {
+  border-bottom: 1px solid #eef2f6;
+  background-color: #fafbfd;
+}
+
+.product-card .card-body {
+  padding: 10px 14px;
+}
+
+.product-card .card-title {
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 6px;
+  color: #2a4d69; 
+}
+
+.product-card .card-text {
+  font-size: 12px;
+  color: #607d8b; 
+  margin-bottom: 6px;
+}
+
+.product-card p {
+  font-size: 13px;
+  margin-bottom: 4px;
+  color: #37474f;
+}
+
+.product-card strong {
+  color: #ff5722; 
+}
+
+
+
+.edit-btn {
+  background-color: #ffffff; 
+  color: #007bff; 
+  border: 2px solid #007bff;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.edit-btn:hover {
+  background-color: #007bff;
+  color: #ffffff; 
+  border-color: #0056b3;
+}
+
+.delete-btn {
+  background-color: #ffffff;
+  color: #dc3545; 
+  border: 2px solid #dc3545;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.delete-btn:hover {
+  background-color: #dc3545;
+  color: #ffffff; 
+  border-color: #a71d2a;
+}
+
+
+
+
+
+

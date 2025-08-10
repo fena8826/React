@@ -1,15 +1,17 @@
 import { Button, Col, Container, Form, Row } from "react-bootstrap";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router";
 import generateUniqueId from "generate-unique-id";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { IoMdAdd } from "react-icons/io";
-import { addProduct } from "../Services/Actions/productAction";
+
 import "./AddProduct.css";
 
 const AddProduct = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
+
+  const { isCreated, isError } = useSelector((state) => state.productReducer);
 
   const initialState = {
     id: "",
@@ -29,7 +31,6 @@ const AddProduct = () => {
       ...inputForm,
       [name]: value,
     });
-
 
     setErrors((prev) => ({
       ...prev,
@@ -58,13 +59,20 @@ const AddProduct = () => {
     const id = generateUniqueId({ length: 6, useLetters: false });
     inputForm.id = id;
 
-    dispatch(addProduct(inputForm));
-    navigate("/");
+    dispatch((inputForm));
   };
+
+  useEffect(() => {
+    if (isCreated) {
+      navigate("/");
+    }
+  }, [isCreated]);
 
   return (
     <Container className="add-product-container">
       <h1 className="add-product-title">Add New Product</h1>
+
+      {isError && <p className="text-danger">{isError}</p>}
 
       <Form className="mt-4" onSubmit={handleSubmit}>
         <Form.Group as={Row} className="mb-3">
@@ -160,7 +168,7 @@ const AddProduct = () => {
 
         <div className="text-end">
           <Button variant="success" type="submit">
-          <IoMdAdd /> Add Product
+            <IoMdAdd /> Add Product
           </Button>
         </div>
       </Form>

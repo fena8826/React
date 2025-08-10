@@ -1,0 +1,36 @@
+{
+  "products": [
+    {
+      "id": "663903",
+      "title": "Alpenliebe Gold Cream Strawberry Toffee Pack",
+      "desc": "Alpenliebe Gold Cream Strawberry Toffee Pack",
+      "price": "234",
+      "category": "Snacks & Munchies",
+      "image": "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=85,metadata=none,w=120,h=120/da/cms-assets/cms/product/070e8cc0-9887-484d-bd0d-96a0c694ff56.jpg"
+    },
+    {
+      "id": "546485",
+      "title": "Amul Taaza Toned Milk",
+      "desc": "Amul Taaza Toned Milk",
+      "price": "29",
+      "category": "Dairy, Bread & Eggs",
+      "image": "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=85,metadata=none,w=120,h=120/da/cms-assets/cms/product/ed444481-1f26-4813-ab7b-60f1d7a8a687.jpg"
+    },
+    {
+      "id": "517477",
+      "title": "Kurkure Masala Munch Crisps",
+      "desc": "Kurkure Masala Munch Crisps",
+      "price": "30",
+      "category": "Snacks & Munchies",
+      "image": "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=450/da/cms-assets/cms/product/c33863d9-3501-4fbc-986f-d0cd1000158d.png"
+    },
+    {
+      "id": "474435",
+      "title": "Sprite Zero Soft Drink",
+      "desc": "Sprite Zero Soft Drink",
+      "price": "60",
+      "category": "Cold Drinks & Juices",
+      "image": "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=85,metadata=none,w=120,h=120/da/cms-assets/cms/product/e651a6bc-8765-493e-9d8e-b5e77811a130.jpg"
+    }
+  ]
+}

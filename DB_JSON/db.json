@@ -1,0 +1,12 @@
+{
+     "users":[
+        {
+        "id":"12",
+        "name":"fena",
+        "email":"fena@test.in"
+        }
+     ],
+      "product":[],
+       "cart":[]
+    
+}
