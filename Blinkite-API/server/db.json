@@ -1,36 +1,84 @@
 {
   "products": [
     {
-      "id": "663903",
-      "title": "Alpenliebe Gold Cream Strawberry Toffee Pack",
-      "desc": "Alpenliebe Gold Cream Strawberry Toffee Pack",
-      "price": "234",
-      "category": "Snacks & Munchies",
-      "image": "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=85,metadata=none,w=120,h=120/da/cms-assets/cms/product/070e8cc0-9887-484d-bd0d-96a0c694ff56.jpg"
-    },
-    {
-      "id": "546485",
-      "title": "Amul Taaza Toned Milk",
-      "desc": "Amul Taaza Toned Milk",
-      "price": "29",
+      "id": "151749",
+      "title": "Angoori Rasmalai",
+      "desc": "Angoori Rasmalai",
+      "price": "600",
       "category": "Dairy, Bread & Eggs",
-      "image": "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=85,metadata=none,w=120,h=120/da/cms-assets/cms/product/ed444481-1f26-4813-ab7b-60f1d7a8a687.jpg"
+      "image": "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/assets/search/usecase/banner/angoori_rasmalai_01.png"
     },
     {
-      "id": "517477",
-      "title": "Kurkure Masala Munch Crisps",
-      "desc": "Kurkure Masala Munch Crisps",
-      "price": "30",
+      "id": "499550",
+      "title": "Barley Kheer",
+      "desc": "Barley Kheer",
+      "price": "900",
+      "category": "Dairy, Bread & Eggs",
+      "image": "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/assets/search/usecase/banner/barley_kheer_01.png"
+    },
+    {
+      "id": "041147",
+      "title": "Whole Farm Grocery Almonds",
+      "desc": "Whole Farm Grocery Almonds",
+      "price": "1000",
       "category": "Snacks & Munchies",
-      "image": "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=450/da/cms-assets/cms/product/c33863d9-3501-4fbc-986f-d0cd1000158d.png"
+      "image": "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=85,metadata=none,w=120,h=120/da/cms-assets/cms/product/5b96513f-16b6-49b6-a656-059ee375b79c.jpg"
     },
     {
-      "id": "474435",
-      "title": "Sprite Zero Soft Drink",
-      "desc": "Sprite Zero Soft Drink",
-      "price": "60",
+      "id": "895492",
+      "title": "Butter Uttapam",
+      "desc": "Butter Uttapam",
+      "price": "300",
+      "category": "Snacks & Munchies",
+      "image": "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/assets/search/usecase/banner/butter_uttapam_01.png"
+    },
+    {
+      "id": "037470",
+      "title": "Butter Toast",
+      "desc": "Butter Toast",
+      "price": "300",
+      "category": "Snacks & Munchies",
+      "image": "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/assets/search/usecase/banner/butter_toast_01.png"
+    },
+    {
+      "id": "541269",
+      "title": "Beanly Dark Chocolate Spread with Breadsticks",
+      "desc": "Beanly Dark Chocolate Spread with Breadsticks",
+      "price": "500",
+      "category": "Snacks & Munchies",
+      "image": "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=85,metadata=none,w=120,h=120/da/cms-assets/cms/product/ec662e3f-20a3-49ce-8ca4-d9b741a61049.jpg"
+    },
+    {
+      "id": "794086",
+      "title": "Anar Dahi Bhalla",
+      "desc": "Anar Dahi Bhalla",
+      "price": "1580",
+      "category": "Dairy, Bread & Eggs",
+      "image": "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/assets/search/usecase/banner/anar_dahi_bhalla_01.png"
+    },
+    {
+      "id": "803023",
+      "title": "Avocado Smoothie",
+      "desc": "Avocado Smoothie",
+      "price": "1200",
       "category": "Cold Drinks & Juices",
-      "image": "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=85,metadata=none,w=120,h=120/da/cms-assets/cms/product/e651a6bc-8765-493e-9d8e-b5e77811a130.jpg"
+      "image": "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/assets/search/usecase/banner/avocado_smoothie_01.png"
+    },
+    {
+      "id": "496363",
+      "title": "Bread Pudding",
+      "desc": "Bread Pudding",
+      "price": "450",
+      "category": "Dairy, Bread & Eggs",
+      "image": "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/assets/search/usecase/banner/bread_pudding_01.png"
+    },
+    {
+      "id": "636644",
+      "title": "Barnyard Millet Uttapam",
+      "desc": "Barnyard Millet Uttapam",
+      "price": "500",
+      "category": "Snacks & Munchies",
+      "image": "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/assets/search/usecase/banner/barnyard_millet_uttapam_01.png"
     }
   ]
 }

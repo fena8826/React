@@ -1,4 +1,4 @@
-import { Container, Navbar, Button, Form, InputGroup } from "react-bootstrap";
+import { Container, Navbar, Button,} from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { GoTriangleDown } from "react-icons/go";
 import logo from "../assets/logo.svg";
@@ -28,17 +28,6 @@ const Header = () => {
         </div>
 
    
-        <Form className="flex-grow-1 ms-5" style={{ maxWidth: "400px" }}>
-          <InputGroup>
-            <Form.Control
-              type="search"
-              placeholder='Search "milk"'
-              aria-label="Search"
-              style={{ borderRadius: "20px" }}
-            />
-          </InputGroup>
-        </Form>
-
 
         <Navbar.Collapse className="justify-content-end mt-2 mb-2">
           <Link to="/add-product">

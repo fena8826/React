@@ -1,4 +1,3 @@
-
 export const loading = () => {
     return {
         type: "LOADING"
@@ -41,13 +40,13 @@ export const updateProduct = (data) => {
 }
 
 
-
+// async action
 export const getAllProductAsync = () => {
     return (dispatch) => {
         dispatch(loading());
 
         setTimeout(()=> {
             dispatch(getAllProducts())
-        }, 3000);
+        }, 5000);
     }
 }
